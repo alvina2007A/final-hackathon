@@ -1,29 +1,22 @@
 * {
     font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 header {
     background-color: #F0F0F0;
-    padding: 10px;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo {
-    width: 150px; 
-}
-
 nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
-}
-
-nav li {
-    margin-right: 20px;
+    gap: 20px;
 }
 
 nav a {
@@ -34,6 +27,7 @@ nav a {
 
 .search-container {
     display: flex;
+    gap: 10px;
     align-items: center;
 }
 
@@ -43,71 +37,70 @@ nav a {
     border-radius: 3px;
 }
 
-.main {
-    font-family: Arial, sans-serif;
-    margin: 0;
-  }
-  
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .item {
-    width: 20%;
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #ccc;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-
-
-  
- .container10 {
-    background-color: #663399;
-    text-align: center;
+.logo {
+    display: block;
+    margin: 20px auto;
+    max-width: 200px;
 }
 
-h1 {
-    color: white;
-    margin-bottom: 20px;
-    
+.full-width-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .container {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
-}
-
-.circle {
-    width: 50px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: #9966CC; 
-    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
-    align-items: center;
     margin: 20px;
-
 }
 
-.circle img {
-    width: 50px;
+.item, .square {
+    flex: 1 1 calc(33.33% - 40px);
+    max-width: calc(33.33% - 40px);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.item img {
+    max-width: 50px;
+    margin-bottom: 10px;
+}
+
+.square img {
+    max-width: 50px;
+    margin-bottom: 10px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.square img:hover {
+    background-color: yellow; /* Add yellow background on hover */
+    border-radius: 50%; /* Make the hover effect circular */
+    padding: 10px; /* Adds spacing for the yellow background */
+    transform: scale(1.1); /* Slightly enlarge the image */
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.square:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f0f8ff;
+    cursor: pointer;
 }
 
 p {
-    color: rgb(10, 10, 10);
     font-size: 14px;
-    margin-top: 5px;
-} 
-.square:hover{
-    background-color: yellow;
+    color: #333;
+    margin: 10px 0 0;
 }
